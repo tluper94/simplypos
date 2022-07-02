@@ -10,8 +10,8 @@ const VerticalNav = ({
 }) => {
   const NavItem = ({ icon, name }) => {
     return (
-      <div className="flex items-center my-2">
-        <span className="text-xl text-font-light dark:text-font-dark">
+      <div className="flex items-center my-4">
+        <span className="text-2xl text-font-light dark:text-font-dark">
           {icon}
         </span>
         <span className="hidden md:inline text-font-light dark:text-font-dark pl-2">

@@ -13,16 +13,18 @@ const VerticalNav = ({
 }) => {
   const handleIsVertical = () => {
     if (isVertical && !collapse) {
-      return `${className} fixed flex flex-col ${
+      return `${className} absolute flex flex-col ${
         widthCollapsed ? widthCollapsed : 'w-20'
       } 
-      ${width ? width : 'md:w-60'} h-screen bg-light dark:bg-dark`;
+      ${
+        width ? width : 'md:w-60'
+      } h-screen backdrop-blur bg-light/80 dark:bg-dark/80`;
     } else if (isVertical && collapse) {
       return `${className} flex flex-col ${
         widthCollapsed ? widthCollapsed : 'w-20'
       } bg-light dark:bg-dark`;
     } else {
-      return `${className} flex flex-row w-100 bg-light dark:bg-dark`;
+      return `${className} flex flex-row w-100 backdrop-blur bg-light/80 dark:bg-dark/80`;
     }
   };
 

@@ -13,7 +13,8 @@ module.exports = {
       warning: '#f5803e',
       danger: '#e63757',
       light: '#f9fafd',
-      dark: '#0b1727'
+      dark: '#0b1727',
+      darkMono: '#1e293b'
     },
     extend: {
       darkMode: 'class',

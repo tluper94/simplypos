@@ -5,11 +5,17 @@ import Stores from '../pages/stores/Stores';
 import Finace from '../pages/finance/Finance.jsx';
 import Employees from '../pages/employees/Employees';
 import Products from '../pages/products/Products';
+import Sidebar from '../components/navbar/sidebar/Sidebar';
+
+import routes from '../routes/routes';
 
 const MainLayout = () => {
   return (
-    <div className="px-4">
-      <div className="h-max overflow-y-auto m-0 md:ml-60">
+    <div className="flex flex-row ">
+      <div className="overflow-y-auto hidden fixed sticky top-[var(--navbar-height)] md:flex content-height">
+        <Sidebar routes={routes} />
+      </div>
+      <div className="h-full min-w-max w-full ">
         <Routes>
           <Route path="/" element={<Dashboard />} />
           <Route path="/stores" element={<Stores />} />

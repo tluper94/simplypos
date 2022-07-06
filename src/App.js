@@ -1,13 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import './App.css';
-import { Routes, Route } from 'react-router';
-
-import Dashboard from './pages/dashboard/Dashboard';
-import Stores from './pages/stores/Stores';
-import Finace from './pages/finance/Finance.jsx';
-import Employees from './pages/employees/Employees';
-import Products from './pages/products/Products';
 
 import NavLayout from './layouts/NavLayout';
 import MainLayout from './layouts/MainLayout';
@@ -17,6 +10,16 @@ function App() {
   const colorTheme = isDark ? 'dark' : 'light';
 
   useEffect(() => {
+    const documentHeight = () => {
+      const doc = document.documentElement;
+      doc.style.setProperty('--doc-height', `${window.innerHeight}px`);
+    };
+
+    window.addEventListener('resize', documentHeight);
+    documentHeight();
+  }, []);
+
+  useEffect(() => {
     const root = window.document.documentElement;
     root.classList.remove(colorTheme);
     root.classList.add(colorTheme);
@@ -24,10 +27,9 @@ function App() {
     localStorage.setItem('theme', isDark);
   }, [colorTheme, isDark]);
 
-  console.log(isDark);
   return (
     <>
-      <div className="h-full overflow-y-auto bg-light dark:bg-dark max-w-8xl mx-auto h-full ">
+      <div className="App flex flex-col h-full overflow-y-auto bg-light dark:bg-dark max-w-8xl mx-auto ">
         <NavLayout />
         <MainLayout />
       </div>

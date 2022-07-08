@@ -15,7 +15,7 @@ const MainLayout = () => {
       <div className="overflow-y-auto hidden fixed sticky top-[var(--navbar-height)] md:flex content-height">
         <Sidebar routes={routes} />
       </div>
-      <div className="h-full min-w-max w-full ">
+      <div className="h-full w-full ">
         <Routes>
           <Route path="/" element={<Dashboard />} />
           <Route path="/stores" element={<Stores />} />

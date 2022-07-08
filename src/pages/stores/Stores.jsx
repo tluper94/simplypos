@@ -1,16 +1,8 @@
 import React from 'react';
+import StoresTable from '../../components/tables/StoresTable';
 
 const Stores = () => {
-  return (
-    <div className="bg-gray-300 dark:bg-gray-1000 rounded-xl shadow p-8 m-10">
-      <p className="text-3xl dark:text-font-dark text-font-light font-bold mb-5">
-        Stores Page!
-      </p>
-      <p className="text-font-light dark:text-font-dark text-lg">
-        React and Tailwind CSS in action
-      </p>
-    </div>
-  );
+  return <StoresTable />;
 };
 
 export default Stores;

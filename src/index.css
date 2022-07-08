@@ -5,6 +5,8 @@
 :root {
   --doc-height: 100%;
   --navbar-height: 60px;
+  --light: '#f9fafd';
+  --dark: '#0b1727';
 }
 
 @layer utilities {
